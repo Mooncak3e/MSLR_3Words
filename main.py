@@ -11,7 +11,7 @@ from cvzone.HandTrackingModule import HandDetector
 from streamlit_webrtc import webrtc_streamer, WebRtcMode, RTCConfiguration
 from glob import glob
 from tensorflow.keras.models import load_model
-
+from typing import Dict, List, Optional, Union
 
 
 
@@ -182,12 +182,13 @@ elif choice_s == "Webcam Hand Detection":
     st.markdown(webcam_subheader, unsafe_allow_html=True)
     webcam_secondheader = '<p style="font-family:Monospace; color:LightSteelBlue; font-size: 10px;">Exception : It will take one or two seconds before it starts detection.</p>'
     st.markdown(webcam_secondheader, unsafe_allow_html=True)
+    
     RTC_CONFIGURATION = RTCConfiguration(
         {"iceServers": [
             {
-                "urls": ["relay1.expressturn.com:3478"]
-                "username": ["efMPIIWU5UFHJ7K95J"]
-                "credential": ["zaJdwNU8XMcQkzdh"]
+                "urls": ["turn:numb.viagenie.ca"],
+                "username": ["webrtc@live.com"],
+                "credential": ["muazkh"],
             }
         ]
         }
