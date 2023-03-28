@@ -1,1 +1,2 @@
-# BSLR_3Words
+# SLR_Word_Level
+Burmese Sign Language Detection. World Level
