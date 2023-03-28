@@ -14,7 +14,6 @@ from tensorflow.keras.models import load_model
 from typing import Dict, List, Optional, Union
 
 
-
 def add_bg_from_local(image_file):
     with open(image_file, "rb") as image_file:
         encoded_string = base64.b64encode(image_file.read())
@@ -48,9 +47,6 @@ st.markdown(original_title, unsafe_allow_html=True)
 #st.subheader('Hand Sign Recognition Application (Word Level)')
 activities = ["Home", "Webcam Hand Detection"]
 choice_s = st.sidebar.selectbox("Select Activity <3", activities)
-
-
-
 
 mp_drawing_styles = mp.solutions.drawing_styles
 mp_drawing = mp.solutions.drawing_utils # Drawing utilities
@@ -182,21 +178,22 @@ elif choice_s == "Webcam Hand Detection":
     st.markdown(webcam_subheader, unsafe_allow_html=True)
     webcam_secondheader = '<p style="font-family:Monospace; color:LightSteelBlue; font-size: 10px;">Exception : It will take one or two seconds before it starts detection.</p>'
     st.markdown(webcam_secondheader, unsafe_allow_html=True)
-    
-    RTC_CONFIGURATION = RTCConfiguration(
-        {"iceServers": [
-            {
-                "urls": ["turn:192.158.29.39:3478?transport=udp"],
-                "username": ["28224511:1379330808"],
-                "credential": ["JZEOEt2V3Qb0y27GRntt2u2PAYA="]
-            }
-        ]
-        }
+    RTCIceServer = TypedDict(
+        "RTCIceServer",
+        {
+            "urls": ["turn:192.158.29.39:3478?transport=udp"],
+            "credential": ["JZEOEt2V3Qb0y27GRntt2u2PAYA="],
+            "username": ["28224511:1379330808"],
+        },
+        total = false,
     )
+    class RTC_CONFIGURATION(TypedDict):
+        iceServers: List[RTCIceServer]
+            
     webrtc_ctx = webrtc_streamer(
         key="WYH",
         mode=WebRtcMode.SENDRECV,
-        rtc_configuration=RTC_CONFIGURATION,
+        rtc_configuration=RTC_CONFIGURATION(),
         media_stream_constraints={"video": True, "audio": False},
         video_processor_factory=VideoProcessor,
         async_processing=True,
