@@ -188,7 +188,7 @@ elif choice_s == "Webcam Hand Detection":
             {
                 "urls": ["turn:numb.viagenie.ca"],
                 "username": ["webrtc@live.com"],
-                "credential": ["muazkh"],
+                "credential": ["muazkh"]
             }
         ]
         }
