@@ -57,8 +57,8 @@ streamlit run project_name.py
 Contributors 
 - Bhone Myint Swe
 - Kaung Khant Min
-- Kyaw
-- Nain Aung Lu
+- Kyaw Zay Ya Lin Tun
+- Naing Aung Luu
 
 ## Version History
 
