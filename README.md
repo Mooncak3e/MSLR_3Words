@@ -1,62 +1,69 @@
 # Project Title
 
-Simple overview of use/purpose.
+Myanmar Sign Language Recognition Application (Word Level).
 
 ## Description
 
-An in-depth paragraph about your project and overview of use.
+Instances of discrimination against disabled individuals are prevalent worldwide. In various facets of life, such as careers or social activities, disabled people encounter unfairness. Among them, deaf people face significant difficulties, as most individuals lack awareness of how to communicate or learn sign language to interact with them. As a result, our team aimed to take the first step in bridging the gap between deaf and non-deaf individuals by developing a platform that facilitates understanding of sign language, enabling communication at one's fingertips. Therefore, we created an AI model that can detect sign language using webcams and mobile phone cameras. Our primary objectives are as follows:
+
+- To translate Myanmar Sign Language at the word level.
+- To provide the first applicable use of Myanmar Sign Language detection.
+- To lead the ongoing research on this project.
+
+Our team comprises four passionate youths from a technology background who aim to support the disabled community in Myanmar.
 
 ## Getting Started
 
 ### Dependencies
 
-* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-* ex. Windows 10
+OS Version - Window 10/11
+<br>
+Required Libraries: <a href="https://github.com/Mooncak3e/BSLR_3Words/blob/main/requirements.txt">requirements.txt</a>                    
+Virtual Environment - Anaconda (ver - 23.1.0)
+<br>
+Python Version - 3.9.16
 
 ### Installing
 
-* How/where to download your program
-* Any modifications needed to be made to files/folders
+We don't need any prior installation methods as we used <a href="https://streamlit.io/">Streamlit</a> platform.
 
 ### Executing program
 
-* How to run the program
-* Step-by-step bullets
+(How to run the program)
+* Open Anaconda Prompt
+* Open your virtual environment by using this command.
 ```
-code blocks for commands
+conda activate environment_name
+```
+* Open the application by using this command. 
+```
+streamlit run project_name.py
 ```
 
-## Help
+(After running the program)
+* A browser will pop up that will lead to our "Home Page" of the program. 
+<img src="readme_images/home_page.png" width="500" height="250">
 
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
+* Choose "Webcam Hand Detection" to run Sign Language Recognition Module. 
+<img src="readme_images/WebcamHandDetection_page.png" width="500" height="250">
+
+* Select the Webcam Device to detect signs.
+<img src="readme_images/select_device.png" width="500" height="250"> 
+
+* After selecting device you can simply start to detect Hand Signs by pressing "Start" button.
 
 ## Authors
 
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
+Contributors 
+- Bhone Myint Swe
+- Kaung Khant Min
+- Kyaw
+- Nain Aung Lu
 
 ## Version History
 
-* 0.2
-    * Various bug fixes and optimizations
-    * See [commit change]() or See [release history]()
-* 0.1
-    * Initial Release
-
-## License
-
-This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
-
-## Acknowledgments
-
-Inspiration, code snippets, etc.
-* [awesome-readme](https://github.com/matiassingers/awesome-readme)
-* [PurpleBooth](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
-* [dbader](https://github.com/dbader/readme-template)
-* [zenorocha](https://gist.github.com/zenorocha/4526327)
-* [fvcproductions](https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46)
+Version 1.0.0 - First Release
+Initial release of the project
+All core functionalities implemented
+Comprehensive testing completed
+As the first version of our project, version 1.0.0 marks a major milestone in our development process. This release includes all core functionalities and has undergone comprehensive testing to ensure its reliability and stability. We look forward to continuing to improve and refine the project in future releases.
